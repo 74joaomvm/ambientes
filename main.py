@@ -50,3 +50,7 @@ def listar_produtos():
     cur.execute("SELECT id, nome, categoria, preco, stock FROM produto WHERE ativo = 1")
     produtos = cur.fetchall()
     conn.close()
+
+    print("\n--- LISTA DE PRODUTOS ---")
+    for p in produtos:
+        print(f"{p[0]} - {p[1]} | {p[2]} | {p[3]}€ | Stock: {p[4]}")
