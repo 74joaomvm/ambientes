@@ -60,6 +60,7 @@ INSERT INTO fornecedor (nome, telefone, email, morada) VALUES
 ('Distribuidora FumoNobre', '222345678', 'info@fumonobre.pt', 'Av. Central 45, Porto'),
 ('Silver Tobacco Imports', '934567890', 'silver@tobaccoimports.com', 'Rua do Mercado 81, Faro');
 
+
 INSERT INTO produto (nome, categoria, preco, stock, fornecedor_id) VALUES
 ('Marlboro Red', 'Cigarros', 5.20, 120, 1),
 ('Marlboro Gold', 'Cigarros', 5.10, 100, 1),
@@ -69,3 +70,9 @@ INSERT INTO produto (nome, categoria, preco, stock, fornecedor_id) VALUES
 ('Erva Bali Shag', 'Tabaco de enrolar', 7.50, 40, 3),
 ('Isqueiro Bic', 'Acessórios', 1.20, 200, 1),
 ('Papel RAW', 'Acessórios', 1.00, 150, 2);
+
+
+INSERT INTO funcionario (nome, username, password_hash, role) VALUES
+('Daniel Silva', 'daniel', '1234', 'admin'),
+('Marta Lopes', 'marta', 'abcd', 'funcionario'),
+('Carlos Pinto', 'carlos', 'pass', 'funcionario');
