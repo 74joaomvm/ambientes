@@ -225,6 +225,13 @@ def adicionar_funcionario():
     user = input("Username: ")
     pw = input("Password (sem hash): ")
     role = input("Role (admin/funcionario): ")
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("""
+        INSERT INTO funcionario (nome, username, password_hash, role)
+        VALUES (?, ?, ?, ?)
+    """, (nome, user, pw, role))
+
 
 
 
