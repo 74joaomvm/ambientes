@@ -231,6 +231,12 @@ def adicionar_funcionario():
         INSERT INTO funcionario (nome, username, password_hash, role)
         VALUES (?, ?, ?, ?)
     """, (nome, user, pw, role))
+    conn.commit()
+    conn.close()
+
+    print("Funcionario adicionado!")
+
+
 
 
 
