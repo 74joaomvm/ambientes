@@ -103,6 +103,28 @@ def alterar_preco():
     print("Preço atualizado!")
 
 
+# --------------------------
+# STOCK
+# --------------------------
+def menu_stock():
+    #Menu interativo para gerir o stock de produtos.
+    while True:
+        print("\n--- MENU STOCK ---")
+        print("1 - Aumentar stock")
+        print("2 - Diminuir stock")
+        print("0 - Voltar")
+
+        op = input("Opção: ")
+
+        if op == "1":
+            alterar_stock(True)  # Aumenta stock
+        elif op == "2":
+            alterar_stock(False)  # Diminui stock
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
+
 
 
 
