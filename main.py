@@ -90,4 +90,17 @@ def procurar_produto():
         print(f"{p[0]} - {p[1]} | {p[2]}€ | Stock: {p[3]}")
 
 
+def alterar_preco():
+    #altera o preco de um produto especifiico
+    pid = int(input("ID do produto: "))
+    novo_preco = float(input("Novo preço: "))
+
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("UPDATE produto SET preco = ? WHERE id = ?", (novo_preco, pid))
+    conn.commit()
+    conn.close()
+
+
+
 
