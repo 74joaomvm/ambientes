@@ -31,3 +31,14 @@ CREATE TABLE cliente (
     telefone TEXT,
     email TEXT
 );
+
+
+CREATE TABLE venda (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total REAL NOT NULL,
+    funcionario_id INTEGER,
+    cliente_id INTEGER,
+    FOREIGN KEY (funcionario_id) REFERENCES funcionario(id),
+    FOREIGN KEY (cliente_id) REFERENCES cliente(id)
+);
