@@ -47,6 +47,20 @@ O sistema inicia imediatamente no terminal.
 
 ![Execução do programa em cmd Windows](printscreen/cmd.png)
 
+
+--- 
+
+## 🗃️ Estrutura do Projeto
+📁 ambientes
+ ├── 📁 database
+ │     └── database.sql
+ ├── 📁 printscreen
+ │     └── cmd.png
+ ├── README.md
+ └── main.py
+
+
+
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
 3. Deve abrir um editor e visualizador de base de dados e colocar o ficheiro database.sql na consulta. (aconselha-mos o uso de HeidiSql para um melhor funcionamento)
 4. Por fim, deve ter o Python instalado e deverá ainda instalar o ficheiro requeriments.txt para que o codigo funcione.
