@@ -15,6 +15,24 @@ Toda a documentação detalhada pode ser encontrada na **Wiki oficial do projeto
 
 ---
 
+## ⚙️ Funcionalidades
+- Gestão de produtos
+- Pesquisa e filtros
+- Carrinho de compras
+- Sistema de vendas
+- Relatórios simples
+- Integração com base de dados SQL
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+- Python
+- MySQL / HeidiSQL
+- Git & GitHub
+- Markdown
+
+---
+
 ## 🚀 Como Usar
 
 ### 1️⃣ Clonar o Repositório
@@ -84,8 +102,26 @@ Nesta versão ainda não. É totalmente em consola. Fique atento ao repositório
 - [zezima000](https://github.com/zezima000)
 - [Migueldc76](https://github.com/Migueldc76)
 
+---
 
-2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
-3. Deve abrir um editor e visualizador de base de dados e colocar o ficheiro database.sql na consulta. (aconselha-mos o uso de HeidiSql para um melhor funcionamento)
-4. Por fim, deve ter o Python instalado e deverá ainda instalar o ficheiro requeriments.txt para que o codigo funcione.
-5. Tudo pronto! Só falta executar o código no terminal!!!
+## 🗺️ Roadmap (Futuro do Projeto)
+- [ ] Adicionar sistema de login
+- [ ] Criar relatórios em PDF
+- [ ] Melhorar gestão de stock
+- [ ] Criar testes automáticos
+
+
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso exclusivamente educacional. Créditos aos autores e colaboradores.
+
+
+---
+
+## ⭐ Contribua!
+
+**Gostou?** 
+Dê uma ⭐ no repositório para apoiar o projeto!
