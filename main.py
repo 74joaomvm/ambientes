@@ -145,3 +145,24 @@ def alterar_stock(aumentar=True):
     conn.close()
 
 
+# --------------------------
+# CLIENTES
+# --------------------------
+def menu_clientes():
+    #Menu interativo para clientes.
+    while True:
+        print("\n--- MENU CLIENTES ---")
+        print("1 - Listar clientes")
+        print("2 - Adicionar cliente")
+        print("0 - Voltar")
+
+        op = input("Opção: ")
+
+        if op == "1":
+            listar_clientes()
+        elif op == "2":
+            adicionar_cliente()
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
