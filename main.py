@@ -75,3 +75,15 @@ def adicionar_produto():
     print("Produto adicionado com sucesso!")
 
 
+def procurar_produto():
+    # Procura produtos pelo nome ou parte do nome
+    texto = input("Nome ou parte do nome: ")
+
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("SELECT id, nome, preco, stock FROM produto WHERE nome LIKE ?", ("%" + texto + "%",))
+    produtos = cur.fetchall()
+    conn.close()
+
+
+
