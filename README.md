@@ -37,7 +37,8 @@ Toda a documentação detalhada pode ser encontrada na **Wiki oficial do projeto
 Dentro da linha de comandos dentro do seu Diretório execute: ```python main.py``` ou ```python3 main.py``` consoante a sua versão python.
 
 
-🎉 Pronto! O sistema inicia imediatamente no terminal.
+### 🎉 Pronto! 
+O sistema inicia imediatamente no terminal.
 
 
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
