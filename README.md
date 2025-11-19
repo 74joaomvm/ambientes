@@ -1,11 +1,33 @@
-## SISTEMA DE CONSOLA PARA UMA TABACARIA
+# 🧾 Sistema de Consola para uma Tabacaria
 
-Para saber o conceito deste projeto, procure pela Wiki na nossa página github deste projeto.
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]()
+[![Status](https://img.shields.io/badge/Status-Ativo-success.svg)]()
+[![License](https://img.shields.io/badge/License-Educacional-lightgrey.svg)]()
+
+Este repositório contém um sistema de consola desenvolvido para a disciplina  
+**Ambientes de Desenvolvimento Colaborativo**. O projeto simula operações básicas de uma tabacaria com integração a uma base de dados SQL.
+
+---
+
+## 📘 Sobre o Projeto
+O sistema permite gerir itens, vendas e consultas da tabacaria através de um menu em consola.  
+Toda a documentação detalhada pode ser encontrada na **Wiki oficial do projeto**.
+
+---
+
+## 🚀 Como Usar
+
+### 1️⃣ Clonar o Repositório
+```git clone https://github.com/74joaomvm/ambientes.git```
 
 
-Como usar:
+### 2️⃣ Configurar a Base de Dados
+1. Abra o arquivo main.py.
+2. Vá até a linha 14 e altere o nome da base de dados conforme a sua
+3. Abra o seu gestor de base de dados (ex.: HeidiSQL) e importe:
+```database/database.sql```
 
-1. Descarregue todos os arquivos usando o comando "git clone https://github.com/74joaomvm/ambientes.git"
+
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
 3. Deve abrir um editor e visualizador de base de dados e colocar o ficheiro database.sql na consulta. (aconselha-mos o uso de HeidiSql para um melhor funcionamento)
 4. Por fim, deve ter o Python instalado e deverá ainda instalar o ficheiro requeriments.txt para que o codigo funcione.
