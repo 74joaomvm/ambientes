@@ -16,3 +16,10 @@ CREATE TABLE produto (
     ativo BOOLEAN DEFAULT 1,
     FOREIGN KEY (fornecedor_id) REFERENCES fornecedor(id)
 );
+
+CREATE TABLE funcionario (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    username TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+);
