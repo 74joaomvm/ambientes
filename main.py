@@ -166,3 +166,18 @@ def menu_clientes():
             break
         else:
             print("Opção inválida!")
+
+
+def listar_clientes():
+    #Lista todos os clientes cadastrados.
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("SELECT id, nome, telefone FROM cliente")
+    clientes = cur.fetchall()
+    conn.close()
+
+    print("\n--- CLIENTES ---")
+    for c in clientes:
+        print(f"{c[0]} - {c[1]} | {c[2]}")
+
+
