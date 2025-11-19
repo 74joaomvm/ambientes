@@ -181,3 +181,16 @@ def listar_clientes():
         print(f"{c[0]} - {c[1]} | {c[2]}")
 
 
+def adicionar_cliente():
+    #Adiciona um novo cliente à base de dados.
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+    email = input("Email: ")
+
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("INSERT INTO cliente (nome, telefone, email) VALUES (?, ?, ?)", (nome, telefone, email))
+    conn.commit()
+    conn.close()
+
+    print("Cliente adicionado!")
