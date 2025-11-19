@@ -72,4 +72,6 @@ def adicionar_produto():
     """, (nome, categoria, preco, stock, fornecedor))
     conn.commit()
     conn.close()
+    print("Produto adicionado com sucesso!")
+
 
