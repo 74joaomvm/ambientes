@@ -85,5 +85,9 @@ def procurar_produto():
     produtos = cur.fetchall()
     conn.close()
 
+    print("\n--- RESULTADOS ---")
+    for p in produtos:
+        print(f"{p[0]} - {p[1]} | {p[2]}€ | Stock: {p[3]}")
+
 
 
