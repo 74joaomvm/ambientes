@@ -221,10 +221,10 @@ def menu_funcionarios():
 
 def adicionar_funcionario():
     # addiciona um funcionario à base de dados
-    nome = input("Name: ")
-    user = input("Username: ")
-    pw = input("Password (sem hash): ")
-    role = input("Role (admin/funcionario): ")
+    nome = input("Nome: ")
+    user = input("Nome de utilizador: ")
+    pw = input("Senha (sem hash): ")
+    role = input("Função (admin/funcionario): ")
     conn = conectar()
     cur = conn.cursor()
     cur.execute("""
@@ -234,7 +234,7 @@ def adicionar_funcionario():
     conn.commit()
     conn.close()
 
-    print("Funcionario adicionado!")
+    print("funcionario adicionado!")
 
 
 
