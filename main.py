@@ -54,3 +54,12 @@ def listar_produtos():
     print("\n--- LISTA DE PRODUTOS ---")
     for p in produtos:
         print(f"{p[0]} - {p[1]} | {p[2]} | {p[3]}€ | Stock: {p[4]}")
+
+
+def adicionar_produto():
+    # Adiciona um novo produto à base de dados
+    nome = input("Nome: ")
+    categoria = input("Categoria: ")
+    preco = float(input("Preço: "))
+    stock = int(input("Stock inicial: "))
+    fornecedor = int(input("ID Fornecedor: "))
