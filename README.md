@@ -61,6 +61,36 @@ O sistema inicia imediatamente no terminal.
 └── main.py
 ```
 
+--- 
+
+## ❓ FAQ
+
+### ➡ Tenho erro de ligação ao MySQL?
+Verifique se o usuário, senha e nome da base de dados no main.py estão corretos.
+
+### ➡ É obrigatório usar HeidiSQL?
+Não. Pode usar qualquer gestor como Workbench, Beekeeper, DBeaver, etc.
+
+### ➡ O sistema tem interface gráfica?
+Nesta versão ainda não. É totalmente em consola. Fique atento ao repositório que em breve haverá uma versão de aplicação web.
+
+
+--- 
+
+## 👨‍💻 Colaboradores
+
+<a href="https://github.com/74joaomvm">
+  <img src="https://github.com/74joaomvm.png" width="60" style="border-radius:50%">
+</a>
+<a href="https://github.com/DanielNascimentoo">
+  <img src="https://github.com/DanielNascimentoo.png" width="60" style="border-radius:50%">
+</a>
+<a href="https://github.com/zezima000">
+  <img src="https://github.com/zezima000.png" width="60" style="border-radius:50%">
+</a>
+<a href="https://github.com/Migueldc76">
+  <img src="https://github.com/Migueldc76.png" width="60" style="border-radius:50%">
+</a>
 
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
 3. Deve abrir um editor e visualizador de base de dados e colocar o ficheiro database.sql na consulta. (aconselha-mos o uso de HeidiSql para um melhor funcionamento)
