@@ -22,4 +22,12 @@ CREATE TABLE funcionario (
     nome TEXT NOT NULL,
     username TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
+    role TEXT DEFAULT 'funcionario'
+);
+
+CREATE TABLE cliente (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    telefone TEXT,
+    email TEXT
 );
