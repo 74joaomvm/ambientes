@@ -76,3 +76,9 @@ INSERT INTO funcionario (nome, username, password_hash, role) VALUES
 ('Daniel Silva', 'daniel', '1234', 'admin'),
 ('Marta Lopes', 'marta', 'abcd', 'funcionario'),
 ('Carlos Pinto', 'carlos', 'pass', 'funcionario');
+
+
+INSERT INTO cliente (nome, telefone, email) VALUES
+('João Santos', '912345678', 'joao@gmail.com'),
+('Maria Oliveira', '934567123', 'maria@hotmail.com'),
+('Pedro Gomes', '967812345', 'pedro@yahoo.com');
