@@ -100,6 +100,8 @@ def alterar_preco():
     cur.execute("UPDATE produto SET preco = ? WHERE id = ?", (novo_preco, pid))
     conn.commit()
     conn.close()
+    print("Preço atualizado!")
+
 
 
 
