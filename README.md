@@ -86,7 +86,7 @@ Nesta versão ainda não. É totalmente em consola. Fique atento ao repositório
   <img src="https://github.com/DanielNascimentoo.png" width="60" style="border-radius:50%">
 </a>
 <a href="https://github.com/zezima000">
-  <img src="https://github.com/zezima000.png" width="60" style="border-radius:50%">
+  <img src="https://github.com/zezim000.png" width="60" style="border-radius:50%">
 </a>
 <a href="https://github.com/Migueldc76">
   <img src="https://github.com/Migueldc76.png" width="60" style="border-radius:50%">
