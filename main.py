@@ -194,3 +194,29 @@ def adicionar_cliente():
     conn.close()
 
     print("Cliente adicionado!")
+
+
+# --------------------------
+# FUNCIONÁRIOS
+# --------------------------
+def menu_funcionarios():
+    #Menu interativo para funcionários.
+    while True:
+        print("\n--- MENU FUNCIONÁRIOS ---")
+        print("1 - Listar funcionários")
+        print("2 - Adicionar funcionário")
+        print("0 - Voltar")
+
+        op = input("Opção: ")
+
+        if op == "1":
+            listar_funcionarios()
+        elif op == "2":
+            adicionar_funcionario()
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
+
+
+
