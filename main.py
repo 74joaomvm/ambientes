@@ -219,4 +219,13 @@ def menu_funcionarios():
             print("Opção inválida!")
 
 
+def adicionar_funcionario():
+    # addiciona um funcionario à base de dados
+    nome = input("Name: ")
+    user = input("Username: ")
+    pw = input("Password (sem hash): ")
+    role = input("Role (admin/funcionario): ")
+
+
+
 
