@@ -87,3 +87,8 @@ INSERT INTO cliente (nome, telefone, email) VALUES
 INSERT INTO venda (total, funcionario_id, cliente_id) VALUES
 (15.60, 1, 1),
 (10.20, 2, 2);
+
+
+INSERT INTO item_venda (venda_id, produto_id, quantidade, preco_unitario, subtotal) VALUES
+(1, 1, 3, 5.20, 15.60),
+(2, 7, 2, 1.20, 2.40),
