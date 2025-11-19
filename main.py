@@ -1,15 +1,43 @@
-import mysql.connector
+import sqlite3
 from datetime import datetime
 
+# Nome da base de dados SQLite
+DB = "tabacaria.db"
 
 
-# ------------------------------------
-# CONEXÃO COM MYSQL
-# ------------------------------------
+# --------------------------
+# CONEXÃO
+# --------------------------
 def conectar():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",        # coloca o teu utilizador
-        password="",        # coloca a tua password
-        database="git"      # base de dados que aparece no HeidiSQL
-    )
+    #Cria e retorna uma conexão com a base de dados SQLite
+    return sqlite3.connect(DB)
+
+
+# --------------------------
+# PRODUTOS
+# --------------------------
+def menu_produtos():
+    #Menu de produtos
+    while True:
+        print("\n--- MENU PRODUTOS ---")
+        print("1 - Listar produtos")
+        print("2 - Adicionar produto")
+        print("3 - Procurar produto")
+        print("4 - Alterar preço")
+        print("0 - Voltar")
+
+        op = input("Opção: ")
+
+        #Chama a função correspondente à escolha
+        if op == "1":
+            listar_produtos()
+        elif op == "2":
+            adicionar_produto()
+        elif op == "3":
+            procurar_produto()
+        elif op == "4":
+            alterar_preco()
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
