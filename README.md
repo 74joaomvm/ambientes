@@ -51,14 +51,15 @@ O sistema inicia imediatamente no terminal.
 --- 
 
 ## 🗃️ Estrutura do Projeto
+```
 📁 ambientes
- ├── 📁 database
- │     └── database.sql
- ├── 📁 printscreen
- │     └── cmd.png
- ├── README.md
- └── main.py
-
+├── 📁 database
+│ └── database.sql
+├── 📁 printscreen
+│ └── cmd.png
+├── README.md
+└── main.py
+```
 
 
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
