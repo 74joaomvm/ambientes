@@ -84,7 +84,7 @@ O sistema inicia imediatamente no terminal.
 ## ❓ FAQ
 
 ### ➡ Tenho erro de ligação ao MySQL?
-Verifique se o usuário, senha e nome da base de dados no main.py estão corretos.
+Verifique se o utilizador, senha e nome da base de dados no main.py estão corretos.
 
 ### ➡ É obrigatório usar HeidiSQL?
 Não. Pode usar qualquer gestor como Workbench, Beekeeper, DBeaver, etc.
