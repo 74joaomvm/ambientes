@@ -219,4 +219,3 @@ def menu_funcionarios():
             print("Opção inválida!")
 
 
-
