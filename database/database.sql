@@ -82,3 +82,8 @@ INSERT INTO cliente (nome, telefone, email) VALUES
 ('João Santos', '912345678', 'joao@gmail.com'),
 ('Maria Oliveira', '934567123', 'maria@hotmail.com'),
 ('Pedro Gomes', '967812345', 'pedro@yahoo.com');
+
+
+INSERT INTO venda (total, funcionario_id, cliente_id) VALUES
+(15.60, 1, 1),
+(10.20, 2, 2);
