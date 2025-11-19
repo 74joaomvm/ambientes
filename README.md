@@ -79,18 +79,11 @@ Nesta versão ainda não. É totalmente em consola. Fique atento ao repositório
 
 ## 👨‍💻 Colaboradores
 
-<a href="https://github.com/74joaomvm">
-  <img src="https://github.com/74joaomvm.png" width="60" style="border-radius:50%">
-</a>
-<a href="https://github.com/DanielNascimentoo">
-  <img src="https://github.com/DanielNascimentoo.png" width="60" style="border-radius:50%">
-</a>
-<a href="https://github.com/zezima000">
-  <img src="https://github.com/zezim000.png" width="60" style="border-radius:50%">
-</a>
-<a href="https://github.com/Migueldc76">
-  <img src="https://github.com/Migueldc76.png" width="60" style="border-radius:50%">
-</a>
+- [74joaomvm](https://github.com/74joaomvm)
+- [DanielNascimentoo](https://github.com/DanielNascimentoo)
+- [zezima000](https://github.com/zezima000)
+- [Migueldc76](https://github.com/Migueldc76)
+
 
 2. No ficheiro main.py, deve editar as seguintes linhas de python: linha 14, colocando o nome da sua base de dados.
 3. Deve abrir um editor e visualizador de base de dados e colocar o ficheiro database.sql na consulta. (aconselha-mos o uso de HeidiSql para um melhor funcionamento)
