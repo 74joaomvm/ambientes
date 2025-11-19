@@ -92,3 +92,5 @@ INSERT INTO venda (total, funcionario_id, cliente_id) VALUES
 INSERT INTO item_venda (venda_id, produto_id, quantidade, preco_unitario, subtotal) VALUES
 (1, 1, 3, 5.20, 15.60),
 (2, 7, 2, 1.20, 2.40),
+(2, 8, 1, 1.00, 1.00),
+(2, 4, 1, 4.80, 4.80);
