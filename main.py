@@ -63,3 +63,13 @@ def adicionar_produto():
     preco = float(input("Preço: "))
     stock = int(input("Stock inicial: "))
     fornecedor = int(input("ID Fornecedor: "))
+
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("""
+        INSERT INTO produto (nome, categoria, preco, stock, fornecedor_id)
+        VALUES (?, ?, ?, ?, ?)
+    """, (nome, categoria, preco, stock, fornecedor))
+    conn.commit()
+    conn.close()
+
