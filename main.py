@@ -41,3 +41,12 @@ def menu_produtos():
             break
         else:
             print("Opção inválida!")
+
+
+def listar_produtos():
+    #Lista todos os produtos ativos na base de dados
+    conn = conectar()
+    cur = conn.cursor() # Ponte que permite executar comandos como o "SELECT; UPDATE ETC..."
+    cur.execute("SELECT id, nome, categoria, preco, stock FROM produto WHERE ativo = 1")
+    produtos = cur.fetchall()
+    conn.close()
