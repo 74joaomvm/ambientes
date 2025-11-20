@@ -437,3 +437,5 @@ def menu_principal():
             print("Opção inválida!")
 
 
+# EXECUTAR
+menu_principal()
