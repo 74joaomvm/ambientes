@@ -228,16 +228,24 @@ def menu_clientes():
 
 
 def listar_clientes():
-    #Lista todos os clientes cadastrados.
-    conn = conectar()
-    cur = conn.cursor()
-    cur.execute("SELECT id, nome, telefone FROM cliente")
-    clientes = cur.fetchall()
-    conn.close()
+    try:
+        #Lista todos os clientes cadastrados.
+        conn = conectar()
+        cur = conn.cursor()
+        cur.execute("SELECT id, nome, telefone FROM cliente")
+        clientes = cur.fetchall()
+        conn.close()
 
-    print("\n--- CLIENTES ---")
-    for c in clientes:
-        print(f"{c[0]} - {c[1]} | {c[2]}")
+        print("\n--- CLIENTES ---")
+        if not clientes:
+            print("Nenhum cliente encontrado.")
+            return
+
+        for c in clientes:
+            print(f"{c[0]} - {c[1]} | {c[2]}")
+
+    except Exception as e:
+        print("Erro ao listar clientes:", e)
 
 
 def adicionar_cliente():
@@ -360,7 +368,7 @@ def nova_venda():
     conn.close()
 
     print(f"Venda registada! ID: {venda_id}")
-    
+
 
 def listar_vendas():
     conn = conectar()
