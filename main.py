@@ -178,22 +178,30 @@ def menu_stock():
 
 
 def alterar_stock(aumentar=True):
-    #Aumenta ou diminui o stock de um produto.
-    pid = int(input("ID Produto: "))
-    qtd = int(input("Quantidade: "))
+    try:
+        #Aumenta ou diminui o stock de um produto.
+        try:
+            pid = int(input("ID Produto: "))
+            qtd = int(input("Quantidade: "))
+        except ValueError:
+            print("Erro: valores inválidos.")
+            return
 
-    conn = conectar()
-    cur = conn.cursor()
+        conn = conectar()
+        cur = conn.cursor()
 
-    if aumentar:
-        cur.execute("UPDATE produto SET stock = stock + ? WHERE id = ?", (qtd, pid))
-        print("Stock aumentado!")
-    else:
-        cur.execute("UPDATE produto SET stock = stock - ? WHERE id = ?", (qtd, pid))
-        print("Stock diminuído!")
+        if aumentar:
+            cur.execute("UPDATE produto SET stock = stock + ? WHERE id = ?", (qtd, pid))
+            print("Stock aumentado!")
+        else:
+            cur.execute("UPDATE produto SET stock = stock - ? WHERE id = ?", (qtd, pid))
+            print("Stock diminuído!")
 
-    conn.commit()
-    conn.close()
+        conn.commit()
+        conn.close()
+
+    except Exception as e:
+        print("Erro ao alterar stock:", e)
 
 
 # --------------------------
