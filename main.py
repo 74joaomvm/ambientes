@@ -13,34 +13,49 @@ def conectar():
     return sqlite3.connect(DB)
 
 
-# --------------------------
-# PRODUTOS
-# --------------------------
-def menu_produtos():
-    #Menu de produtos
+# ------------------------------------
+# MENU PRINCIPAL
+# ------------------------------------
+def menu_principal():
     while True:
-        print("\n--- MENU PRODUTOS ---")
-        print("1 - Listar produtos")
-        print("2 - Adicionar produto")
-        print("3 - Procurar produto")
-        print("4 - Alterar preço")
-        print("0 - Voltar")
+        print(r"""
+ /$$$$$$$$ /$$$$$$  /$$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$  /$$$$$$ 
+|__  $$__//$$__  $$| $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/ /$$__  $$
+   | $$  | $$  \ $$| $$  \ $$| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$  | $$  \ $$
+   | $$  | $$$$$$$$| $$$$$$$ | $$$$$$$$| $$      | $$$$$$$$| $$$$$$$/  | $$  | $$$$$$$$
+   | $$  | $$__  $$| $$__  $$| $$__  $$| $$      | $$__  $$| $$__  $$  | $$  | $$__  $$
+   | $$  | $$  | $$| $$  \ $$| $$  | $$| $$    $$| $$  | $$| $$  \ $$  | $$  | $$  | $$
+   | $$  | $$  | $$| $$$$$$$/| $$  | $$|  $$$$$$/| $$  | $$| $$  | $$ /$$$$$$| $$  | $$
+   |__/  |__/  |__/|_______/ |__/  |__/ \______/ |__/  |__/|__/  |__/|______/|__/  |__/
+        """)
+        print("1 - Produtos")
+        print("2 - Stock")
+        print("3 - Vendas")
+        print("4 - Clientes")
+        print("5 - Funcionários")
+        print("0 - Sair")
 
         op = input("Opção: ")
 
-        #Chama a função correspondente à escolha
         if op == "1":
-            listar_produtos()
+            menu_produtos()
         elif op == "2":
-            adicionar_produto()
+            menu_stock()
         elif op == "3":
-            procurar_produto()
+            menu_vendas()
         elif op == "4":
-            alterar_preco()
+            menu_clientes()
+        elif op == "5":
+            menu_funcionarios()
         elif op == "0":
+            print("A sair...")
             break
         else:
             print("Opção inválida!")
+
+
+# EXECUTAR
+menu_principal()
 
 
 def listar_produtos():
