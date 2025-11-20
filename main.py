@@ -296,5 +296,24 @@ def adicionar_funcionario():
     print("funcionario adicionado!")
 
 
+# ------------------------------------
+# MENU VENDAS
+# ------------------------------------
+def menu_vendas():
+    while True:
+        print("\n--- MENU VENDAS ---")
+        print("1 - Nova venda")
+        print("2 - Listar vendas")
+        print("0 - Voltar")
 
+        op = input("Opção: ")
+
+        if op == "1":
+            nova_venda()
+        elif op == "2":
+            listar_vendas()
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
 
