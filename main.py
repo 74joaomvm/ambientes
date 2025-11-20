@@ -109,18 +109,27 @@ def adicionar_produto():
 
 
 def procurar_produto():
-    # Procura produtos pelo nome ou parte do nome
-    texto = input("Nome ou parte do nome: ")
+    try:
+        # Procura produtos pelo nome ou parte do nome
+        texto = input("Nome ou parte do nome: ")
 
-    conn = conectar()
-    cur = conn.cursor()
-    cur.execute("SELECT id, nome, preco, stock FROM produto WHERE nome LIKE ?", ("%" + texto + "%",))
-    produtos = cur.fetchall()
-    conn.close()
+        conn = conectar()
+        cur = conn.cursor()
+        cur.execute("SELECT id, nome, preco, stock FROM produto WHERE nome LIKE ?", ("%" + texto + "%",))
+        produtos = cur.fetchall()
+        conn.close()
 
-    print("\n--- RESULTADOS ---")
-    for p in produtos:
-        print(f"{p[0]} - {p[1]} | {p[2]}€ | Stock: {p[3]}")
+        print("\n--- RESULTADOS ---")
+        if not produtos:
+            print("Nenhum produto encontrado.")
+            return
+
+        for p in produtos:
+            print(f"{p[0]} - {p[1]} | {p[2]}€ | Stock: {p[3]}")
+
+    except Exception as e:
+        print("Erro ao procurar produto:", e)
+
 
 
 def alterar_preco():
