@@ -59,16 +59,25 @@ menu_principal()
 
 
 def listar_produtos():
-    #Lista todos os produtos ativos na base de dados
-    conn = conectar()
-    cur = conn.cursor() # Ponte que permite executar comandos como o "SELECT; UPDATE ETC..."
-    cur.execute("SELECT id, nome, categoria, preco, stock FROM produto WHERE ativo = 1")
-    produtos = cur.fetchall()
-    conn.close()
+    try:
+        #Lista todos os produtos ativos na base de dados
+        conn = conectar()
+        cur = conn.cursor() # Ponte que permite executar comandos como o "SELECT; UPDATE ETC..."
+        cur.execute("SELECT id, nome, categoria, preco, stock FROM produto WHERE ativo = 1")
+        produtos = cur.fetchall()
+        conn.close()
 
-    print("\n--- LISTA DE PRODUTOS ---")
-    for p in produtos:
-        print(f"{p[0]} - {p[1]} | {p[2]} | {p[3]}€ | Stock: {p[4]}")
+        print("\n--- LISTA DE PRODUTOS ---")
+        if not produtos:
+            print("Nenhum produto encontrado.")
+            return
+
+        for p in produtos:
+            print(f"{p[0]} - {p[1]} | {p[2]} | {p[3]}€ | Stock: {p[4]}")
+
+    except Exception as e:
+        print("Erro ao listar produtos:", e)
+
 
 
 def adicionar_produto():
