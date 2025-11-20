@@ -133,16 +133,25 @@ def procurar_produto():
 
 
 def alterar_preco():
-    #altera o preco de um produto especifiico
-    pid = int(input("ID do produto: "))
-    novo_preco = float(input("Novo preço: "))
+    try:
+        #altera o preco de um produto especifiico
+        try:
+            pid = int(input("ID do produto: "))
+            novo_preco = float(input("Novo preço: "))
+        except ValueError:
+            print("Erro: valores inválidos.")
+            return
 
-    conn = conectar()
-    cur = conn.cursor()
-    cur.execute("UPDATE produto SET preco = ? WHERE id = ?", (novo_preco, pid))
-    conn.commit()
-    conn.close()
-    print("Preço atualizado!")
+        conn = conectar()
+        cur = conn.cursor()
+        cur.execute("UPDATE produto SET preco = ? WHERE id = ?", (novo_preco, pid))
+        conn.commit()
+        conn.close()
+        print("Preço atualizado!")
+
+    except Exception as e:
+        print("Erro ao alterar preço:", e)
+
 
 
 # --------------------------
