@@ -402,3 +402,38 @@ def listar_vendas():
     print("\n--- LISTA DE VENDAS ---")
     for v in vendas:
         print(f"{v[0]} | {v[1]} | Total: {v[2]}€ | Cliente: {v[3]}")
+
+
+# --------------------------
+# MENU PRINCIPAL
+# --------------------------
+def menu_principal():
+    #Menu principal do sistema.
+    while True:
+        print("\n==== TABACARIA ====")
+        print("1 - Produtos")
+        print("2 - Stock")
+        print("3 - Vendas")
+        print("4 - Clientes")
+        print("5 - Funcionários")
+        print("0 - Sair")
+
+        op = input("Opção: ")
+
+        if op == "1":
+            menu_produtos()
+        elif op == "2":
+            menu_stock()
+        elif op == "3":
+            menu_vendas()
+        elif op == "4":
+            menu_clientes()
+        elif op == "5":
+            menu_funcionarios()
+        elif op == "0":
+            print("A sair...")
+            break
+        else:
+            print("Opção inválida!")
+
+
