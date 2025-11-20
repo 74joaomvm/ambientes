@@ -249,18 +249,23 @@ def listar_clientes():
 
 
 def adicionar_cliente():
-    #Adiciona um novo cliente à base de dados.
-    nome = input("Nome: ")
-    telefone = input("Telefone: ")
-    email = input("Email: ")
+    try:
+        #Adiciona um novo cliente à base de dados.
+        nome = input("Nome: ")
+        telefone = input("Telefone: ")
+        email = input("Email: ")
 
-    conn = conectar()
-    cur = conn.cursor()
-    cur.execute("INSERT INTO cliente (nome, telefone, email) VALUES (?, ?, ?)", (nome, telefone, email))
-    conn.commit()
-    conn.close()
+        conn = conectar()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO cliente (nome, telefone, email) VALUES (?, ?, ?)", 
+                    (nome, telefone, email))
+        conn.commit()
+        conn.close()
 
-    print("Cliente adicionado!")
+        print("Cliente adicionado!")
+
+    except Exception as e:
+        print("Erro ao adicionar cliente:", e)
 
 
 # --------------------------
