@@ -375,4 +375,16 @@ def listar_vendas():
     print("\n--- LISTA DE VENDAS ---")
     for v in vendas:
         print(f"{v[0]} | {v[1]} | Total: {v[2]}€ | Cliente: {v[3]}")
+        
 
+def listar_funcionarios():
+    #Lista todos os funcionários cadastrados.
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("SELECT id, nome, username, role FROM funcionario")
+    funcionarios = cur.fetchall()
+    conn.close()
+
+    print("\n--- FUNCIONÁRIOS ---")
+    for f in funcionarios:
+        print(f"{f[0]} | {f[1]} | {f[2]} | {f[3]}")
