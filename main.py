@@ -81,22 +81,31 @@ def listar_produtos():
 
 
 def adicionar_produto():
-    # Adiciona um novo produto à base de dados
-    nome = input("Nome: ")
-    categoria = input("Categoria: ")
-    preco = float(input("Preço: "))
-    stock = int(input("Stock inicial: "))
-    fornecedor = int(input("ID Fornecedor: "))
+    try:
+        # Adiciona um novo produto à base de dados
+        nome = input("Nome: ")
+        categoria = input("Categoria: ")
 
-    conn = conectar()
-    cur = conn.cursor()
-    cur.execute("""
-        INSERT INTO produto (nome, categoria, preco, stock, fornecedor_id)
-        VALUES (?, ?, ?, ?, ?)
-    """, (nome, categoria, preco, stock, fornecedor))
-    conn.commit()
-    conn.close()
-    print("Produto adicionado com sucesso!")
+        try:
+            preco = float(input("Preço: "))
+            stock = int(input("Stock inicial: "))
+            fornecedor = int(input("ID Fornecedor: "))
+        except ValueError:
+            print("Erro: valores inválidos.")
+            return
+
+        conn = conectar()
+        cur = conn.cursor()
+        cur.execute("""
+            INSERT INTO produto (nome, categoria, preco, stock, fornecedor_id)
+            VALUES (?, ?, ?, ?, ?)
+        """, (nome, categoria, preco, stock, fornecedor))
+        conn.commit()
+        conn.close()
+        print("Produto adicionado com sucesso!")
+
+    except Exception as e:
+        print("Erro ao adicionar produto:", e)
 
 
 def procurar_produto():
