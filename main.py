@@ -237,8 +237,67 @@ def adicionar_funcionario():
     print("funcionario adicionado!")
 
 
+# ------------------------------------
+# MENU VENDAS
+# ------------------------------------
+def menu_vendas():
+    while True:
+        print("\n--- MENU VENDAS ---")
+        print("1 - Nova venda")
+        print("2 - Listar vendas")
+        print("0 - Voltar")
+
+        op = input("Opção: ")
+
+        if op == "1":
+            nova_venda()
+        elif op == "2":
+            listar_vendas()
+        elif op == "0":
+            break
+        else:
+            print("Opção inválida!")
 
 
+def nova_venda():
+    funcionario = int(input("ID Funcionário: "))
+    cliente = int(input("ID Cliente: "))
 
+    itens = []
 
+    while True:
+        pid = int(input("Produto ID (0 para terminar): "))
+        if pid == 0:
+            break
+        qtd = int(input("Quantidade: "))
+        itens.append((pid, qtd))
 
+    total = 0
+    conn = conectar()
+    cur = conn.cursor()
+
+    for pid, qtd in itens:
+        cur.execute("SELECT preco FROM produto WHERE id = %s", (pid,))
+        preco = cur.fetchone()[0]
+        total += preco * qtd
+
+    cur.execute("INSERT INTO venda (total, funcionario_id, cliente_id) VALUES (%s, %s, %s)",
+                (total, funcionario, cliente))
+    venda_id = cur.lastrowid
+
+    for pid, qtd in itens:
+        cur.execute("SELECT preco FROM produto WHERE id = %s", (pid,))
+        preco = cur.fetchone()[0]
+        subtotal = preco * qtd
+
+        cur.execute("""
+            INSERT INTO item_venda (venda_id, produto_id, quantidade, preco_unitario, subtotal)
+            VALUES (%s, %s, %s, %s, %s)
+        """, (venda_id, pid, qtd, preco, subtotal))
+
+        cur.execute("UPDATE produto SET stock = stock - %s WHERE id = %s", (qtd, pid))
+
+    conn.commit()
+    conn.close()
+
+    print(f"Venda registada! ID: {venda_id}")
