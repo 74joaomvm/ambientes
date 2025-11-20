@@ -301,3 +301,19 @@ def nova_venda():
     conn.close()
 
     print(f"Venda registada! ID: {venda_id}")
+
+def listar_vendas():
+    conn = conectar()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT venda.id, venda.data_venda, venda.total, cliente.nome
+        FROM venda
+        LEFT JOIN cliente ON cliente.id = venda.cliente_id
+    """)
+    vendas = cur.fetchall()
+    conn.close()
+
+    print("\n--- LISTA DE VENDAS ---")
+    for v in vendas:
+        print(f"{v[0]} | {v[1]} | Total: {v[2]}€ | Cliente: {v[3]}")
+
